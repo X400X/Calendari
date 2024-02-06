@@ -1,22 +1,17 @@
-I completely forgot about the need to complete this task. 
-I remembered when I received the letter in the mail. 
-My knowledge is not enough at the moment to create a graphical interface. 
-I started studying kiwy on my own, but that’s not enough. 
-I thought that in the remaining time I could write a console calendar program since 
-I remembered that there was such a task.
+This Python program seems to be a calendar application that allows users to add, view, search, and delete events. Here's a breakdown of its features and functionality:
 
-My program will save your entries to a file and 
-load them when you use the program. 
-At the moment, wide functionality is not available, but 
-I plan to expand it. All logic will be applicable later. 
-You can add a new entry. There are 5 fields available in a record. 
-These are date, time, event name, description and priority. 
-Also, you will not be able to enter incorrect data, say 12/32/2020. 
-You can search for entries by date, importance and event name.
+Importing Required Modules: The program imports several modules including calendar, datetime, os, re, and time.
 
-Third-party libraries used are re and time. 
-Re is working with regular expressions. 
-Checking strings for certain patterns. 
-The topic of regular expressions is very broad and 
-quite complex. I didn’t understand the end and used 
-Time to check the date instead of regular expressions.
+Global Variables and Data Structures: The program initializes global variables date, date_del, and selected_event as empty lists. These lists seem to store event information and provide a structure for managing events.
+
+Functions for Loading and Saving Events: The load_dates() function checks if a file named "date.txt" exists and loads event data from it into the date list. The save_dates() function saves event data from the date list back to the "date.txt" file.
+
+Functions for Input Validation: Several functions such as check_time(), check_date(), and check_imp() are provided for validating user input for time, date, and event importance respectively. These functions ensure that user-provided data is in the correct format and within acceptable ranges.
+
+Functions for Displaying Calendar: The set_str1() function seems to generate a formatted calendar string for a given month and year. It utilizes the calendar module to create a calendar layout with event dates highlighted.
+
+Functions for Managing Events: There are functions for adding new events, displaying events, searching events by date, event name, or importance, and deleting events. These functions interact with the date list to perform various operations on event data.
+
+Main Program Loop: The program runs in a loop that continuously prompts the user to choose from different options such as adding events, viewing events, searching events, or exiting the program. It handles user input and calls the corresponding functions to perform the desired actions.
+
+Overall, this program provides a basic calendar functionality allowing users to manage events with options for adding, viewing, searching, and deleting events. It uses text files for storing event data and provides input validation to ensure data integrity.
